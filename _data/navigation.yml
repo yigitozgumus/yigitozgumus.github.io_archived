@@ -1,12 +1,10 @@
 # main links
 main:
-  - title: "Quick-Start Guide"
-    url: https://mmistakes.github.io/minimal-mistakes/docs/quick-start-guide/
-  # - title: "About"
-  #   url: https://mmistakes.github.io/minimal-mistakes/about/
-  # - title: "Sample Posts"
-  #   url: /year-archive/
-  # - title: "Sample Collections"
-  #   url: /collection-archive/
-  # - title: "Sitemap"
-  #   url: /sitemap/
+  - title: "About"
+    url: https://yigitozgumus.com/about/
+  - title: "Blog"
+    url: https://yigitozgumus.com/blog/
+  - title: "Sample Collections"
+    url: https://yigitozgumus.com/category-archive/
+  - title: "Sitemap"
+    url: https://yigitozgumus.com/sitemap/
