@@ -1,13 +1,13 @@
 ---
+title: "Hello There"
 excerpt: "Pretty boring and generic welcome"
-categories: blog
+categories:
+  - blog
 header:
   overlay_image: "./../assets/images/posts/hello_world/header.jpeg"
   overlay_color: "444"
 classes: wide
 ---
-
-Hello there 
 
 
 Yes this is my first post. And if you happen to open this website right now you can witness all of its non-existing glory.
