@@ -3,8 +3,8 @@ main:
   - title: "About"
     url: https://yigitozgumus.com/about/
   - title: "Blog"
-    url: https://yigitozgumus.com/blog/
-  - title: "Sample Collections"
-    url: https://yigitozgumus.com/category-archive/
-  - title: "Sitemap"
-    url: https://yigitozgumus.com/sitemap/
+  #   url: https://yigitozgumus.com/blog/
+  # - title: "Sample Collections"
+  #   url: https://yigitozgumus.com/category-archive/
+  # - title: "Sitemap"
+  #   url: https://yigitozgumus.com/sitemap/
