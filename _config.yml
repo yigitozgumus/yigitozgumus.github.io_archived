@@ -24,7 +24,7 @@ description              : "My personal website."
 url                      : "https://yigitozgumus.com/"
 baseurl                  : 
 repository               : "yigitozgumus/yigitozgumus.github.io"
-teaser                   : "/assets/img/logo/hello_world.png"
+teaser                   : "/assets/images/logo/hello_world.png"
 logo                     : # path of logo image to display in the masthead, e.g. "/assets/images/88x88.png"
 masthead_title           : "Yigit Ozgumus"
 breadcrumbs              : false  # true, false (default)
@@ -96,7 +96,7 @@ analytics:
 # Site Author
 author:
   name             : "Yiğit Özgümüş"
-  avatar           : "/assets/img/home/me_icon.jpg"
+  avatar           : "/assets/images/home/me_icon.jpg"
   bio              : "Software Engineer, M.Sc."
   location         : "Turkey"
   email            : "yigitozgumus1@gmail.com"
