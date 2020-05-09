@@ -2,7 +2,8 @@
 excerpt: "Pretty boring and generic welcome"
 categories: blog
 header:
-  overlay_color: "#333"
+  overlay_image: "./../assets/img/posts/hello_world/header.jpeg"
+  overlay_color: "444"
 ---
 
 Hello there 
