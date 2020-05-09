@@ -79,7 +79,7 @@ $$
     \\
     \log (1-D(G(\boldsymbol{z ; \theta_g}); \theta_d)) &\rightarrow \text{The log likelihood of the image from Generator being fake} \\
     \\ 
-    \mathbb{E}_{\boldsymbol{z } \sim p_{\boldsymbol{z}}(\boldsymbol{z})}[\log (1-D(G(\boldsymbol{z ; \theta_g}); \theta_d))] &\rightarrow \text{Expected log likelihood of Discriminator identifying generated image as fake}\\
+    \mathbb{E}_{\boldsymbol{z } \sim p_{\boldsymbol{z}}(\boldsymbol{z})}[\log (1-D(G(\boldsymbol{z ; \theta_g}); \theta_d))] &\rightarrow \text{E.L.L of Discriminator identifying generated image as fake}\\
 \end{aligned}
 $$
 
