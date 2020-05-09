@@ -2,7 +2,8 @@
 excerpt: "I graduated from Politecnico di Milano !"
 header:
   overlay_color: "#333"
-Tags: blog anomaly-detection thesis polimi
+tags: anomaly-detection thesis polimi
+categories: blog
 ---
 
 

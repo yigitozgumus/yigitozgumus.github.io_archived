@@ -1,6 +1,6 @@
 ---
 excerpt: "Pretty boring and generic welcome"
-Tags: blog
+categories: blog
 header:
   overlay_color: "#333"
 ---

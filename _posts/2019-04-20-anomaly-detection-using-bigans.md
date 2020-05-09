@@ -1,6 +1,7 @@
 ---
 excerpt: "My thoughts about anomaly detection using GAN's"
-Tags: blog anomaly-detection gan bigan generative-models
+tags: blog anomaly-detection gan bigan generative-models
+categories: blog
 header:
   overlay_color: "#333"
 toc: true
