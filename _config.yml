@@ -18,7 +18,7 @@ minimal_mistakes_skin    : "default" # "air", "aqua", "contrast", "dark", "dirt"
 locale                   : "en-US"
 title                    : "Yigit Ozgumus"
 title_separator          : "-"
-subtitle                 : "Work in progress. Again."
+subtitle                 : "Hello there"
 name                     : "Şemsi Yiğit Özgümüş"
 description              : "My personal website."
 url                      : "https://yigitozgumus.com/"
@@ -27,7 +27,7 @@ repository               : "yigitozgumus/yigitozgumus.github.io"
 teaser                   : "/assets/images/logo/hello_world.png"
 logo                     : # path of logo image to display in the masthead, e.g. "/assets/images/88x88.png"
 masthead_title           : "Yigit Ozgumus"
-breadcrumbs              : false  # true, false (default)
+breadcrumbs              : true  # true, false (default)
 words_per_minute         : 200
 comments:
   provider               : "disqus" # false (default), "disqus", "discourse", "facebook", "staticman", "staticman_v2", "utterances", "custom"
@@ -39,7 +39,7 @@ comments:
     # https://developers.facebook.com/docs/plugins/comments
     appid                :
     num_posts            : # 5 (default)
-    colorscheme          : # "light" (default), "dark"
+    colorscheme          : # "light" (default), "dark" 
   utterances:
     theme                : # "github-light" (default), "github-dark"
     issue_term           : # "pathname" (default)
@@ -101,13 +101,11 @@ author:
   location         : "Turkey"
   email            : "yigitozgumus1@gmail.com"
   links:
-    - label: "Website"
-      icon: "fas fa-fw fa-link"
-      url: "https://www.yigitozgumus.com"
     - label: "GitHub"
       icon: "fab fa-fw fa-github"
       url: "https://github.com/yigitozgumus"
-  
+
+
 
 # Site Footer
 footer:
