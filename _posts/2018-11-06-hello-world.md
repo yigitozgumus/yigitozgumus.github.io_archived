@@ -1,8 +1,8 @@
 ---
 title: "Hello There"
 excerpt: "Pretty boring and generic welcome"
-categories:
-  - blog
+categories: blog
+author_profile: false
 ---
 
 

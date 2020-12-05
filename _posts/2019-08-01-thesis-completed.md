@@ -2,7 +2,7 @@
 title: "Thesis Completed!"
 excerpt: "I graduated from Politecnico di Milano !"
 tags: anomaly-detection thesis polimi
-
+author_profile: false
 categories: blog
 ---
 
