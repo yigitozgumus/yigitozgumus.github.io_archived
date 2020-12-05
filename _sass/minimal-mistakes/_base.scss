@@ -58,6 +58,12 @@ h6 {
   font-size: $h-size-6;
 }
 
+.center-image
+{
+    margin: 0 auto;
+    display: block;
+}
+
 small,
 .small {
   font-size: $type-size-6;
