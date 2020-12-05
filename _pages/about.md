@@ -23,11 +23,10 @@ I believe willing to learn anything and being humble about the things you don't 
 
 What else ? Well, I love to run and occasionaly draw stuff. Running was once a goal for me to reach as an indicative to a healthier life but it became a habit I couldn't shake it off.
 
- Here is to the year 2017 when I ran every day (almost) and documented it. 
+ Here is to the year 2017 when I ran every day (almost) and documented it. I still run of course. Just not everyday :)
 
 ![](../assets/images/2017.gif){: .center-image }
 
  And of course I love a good cup of coffee.
 
 In this website you will hopefully see a glimpse of what I've been upto in my software career and the things I am curios to learn. I tried to take up writing about stuff many times but failed miserably. Believe me, writing this about me page surprised me, like a lot.
-
