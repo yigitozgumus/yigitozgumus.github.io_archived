@@ -1,7 +1,6 @@
 ---
 title: "Hello There"
 excerpt: "Pretty boring and generic welcome"
-categories: blog
 author_profile: false
 ---
 
@@ -18,8 +17,6 @@ So I've decided that the busiest period of my life would be the perfect time to 
 For now, this site will be on github pages. I am planning to move all of this to a private server for convenience at some point but right now as you 
 can see the design is far from below average. It will be a fun experience to build something totally from scratch. 
 That's why I won't use any premade theme or solution to my design ideas and will implement them myself. 
-
-
 
 So overall, The main purpose of this website of course is to make this some sort of platform for my ideas, practises and the things I've learnt and wanted to share.
 Designing it will be an extra, fun side project. 
