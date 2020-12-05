@@ -1,10 +1,8 @@
 ---
 title: "Thesis Completed!"
 excerpt: "I graduated from Politecnico di Milano !"
-header:
-  overlay_image: "../assets/images/posts/thesis_completed/header.jpg"
 tags: anomaly-detection thesis polimi
-classes: wide
+
 categories: blog
 ---
 

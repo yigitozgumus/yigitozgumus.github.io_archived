@@ -3,10 +3,6 @@ title: "Hello There"
 excerpt: "Pretty boring and generic welcome"
 categories:
   - blog
-header:
-  overlay_image: "./../assets/images/posts/hello_world/header.jpeg"
-  overlay_color: "444"
-classes: wide
 ---
 
 
