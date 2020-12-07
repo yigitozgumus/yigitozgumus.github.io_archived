@@ -2,6 +2,7 @@
 title: "r're(gular) expre(s+)ions' "
 excerpt: "Pretty boring and generic blabbering about regular exressions"
 author_profile: false
+classes: wide
 ---
 
 ## Intro

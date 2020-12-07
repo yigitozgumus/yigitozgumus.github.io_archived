@@ -4,9 +4,8 @@ permalik: /posts/:title
 excerpt: "My thoughts about anomaly detection using GAN's"
 header:
   overlay_image: "./../assets/images/home/post_header_teaser.jpg"
-toc: true
-toc_icon: "cog"
 author_profile: false
+classes: wide
 ---
 
 In this post I will explain the architecture of the bigan and how can it be used for the anomaly detection problem. The 
