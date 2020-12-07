@@ -5,7 +5,10 @@ excerpt: "My thoughts about anomaly detection using GAN's"
 header:
   overlay_image: "./../assets/images/home/post_header_teaser.jpg"
 author_profile: false
-classes: wide
+toc: true
+comments: true
+author: Yigit Ozgumus
+layout: post
 ---
 
 In this post I will explain the architecture of the bigan and how can it be used for the anomaly detection problem. The 
@@ -37,7 +40,7 @@ for this problem.
  classify input images as "real" or "fake".
 
 
-![The pipeline of GAN Framework](../../assets/images/posts/gan.jpg){:class="img-responsive"}
+![The pipeline of GAN Framework](../../../assets/images/posts/gan.jpg){:class="img-responsive"}
 
 
 The main training idea behind GANs is based on game theory and assuming that the two network are competing each other. 
@@ -47,7 +50,7 @@ used to maximize $V(D, G)$ with respect to parameters of $D$ by assuming a
 constant $G$, and then minimizing $V(D, G)$ with respect to parameters of $G$ by assuming a constant $D$.
 
 $$
-\scriptsize
+\normalsize
 \min _{G} \max _{D} V(D, G)=\mathbb{E}_{\boldsymbol{x} \sim p_{\text { data }}(\boldsymbol{x})}[\log D(\boldsymbol{x; \theta_d})]+\mathbb{E}_{\boldsymbol{z} \sim p_{\boldsymbol{z}}(\boldsymbol{z})}[\log (1-D(G(\boldsymbol{z; \theta_g})))]
 $$
 
@@ -57,7 +60,7 @@ $$
 ## Term 1
 
 $$
-\scriptsize
+
 \begin{aligned}
     D(\boldsymbol{x ; \theta_d}) &\rightarrow \text{Likelihood of Discriminator identifying x as Real}\\
     \\
@@ -70,7 +73,7 @@ $$
 ## Term 2
 
 $$
-\scriptsize
+\normalsize
 \begin{aligned}
     G(\boldsymbol{z ; \theta_g}) &\rightarrow \text{Generated image sample from noise $z$} \\
     \\
@@ -107,7 +110,7 @@ This encoder learns the mapping representation from the input image to the laten
 inference process much faster than the previous proposed method which is an iterative optimization process via backpropagation for 
 each sample. 
 
-![BiGAN Framework](../../assets/images/posts/bigan.jpg){:class="img-responsive"}
+![BiGAN Framework](../../../assets/images/posts/bigan.jpg){:class="img-responsive"}
 
 With the addition of the Encoder, the Discriminator behavior changes a little. Now the discriminator not only discriminates in data
 space ($z$ or $G(z)$) but jointly in data and latent space tuples ($x$, $E(x)$) versus ($G(z)$ , $z$). Generator and encoder are trying 
@@ -117,7 +120,7 @@ to fool the discriminator.
 Let's explain the objective function of the BiGAN like we did with GAN.
 
 $$
-\scriptsize
+\normalsize
 \min _{G,E} \max _{D} V(G, D, E)=\mathbb{E}_{x \sim p_{x}}[\log D(x, E(x))]+\mathbb{E}_{z \sim p_{z}}[\log (1-D(G(z), z))]
 $$
 
@@ -139,7 +142,7 @@ combination of the reconstruction loss ($L_G$) and discrimination-based loss ($L
 below.
 
 $$
-\scriptsize
+\normalsize
 \begin{aligned}
 A(x) &= \alpha L_{G}(x)+(1-\alpha) L_{D}(x) \\
 \\

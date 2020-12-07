@@ -2,6 +2,7 @@
 title: "Hello There"
 excerpt: "Pretty boring and generic welcome"
 author_profile: false
+layout: post
 ---
 
 
