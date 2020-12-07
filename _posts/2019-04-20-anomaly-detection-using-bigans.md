@@ -1,7 +1,7 @@
 ---
 title: "Anomaly Detection using GAN's"
 permalik: /posts/:title
-excerpt: "My thoughts about anomaly detection using GAN's"
+description: "My thoughts about anomaly detection using GAN's"
 header:
   overlay_image: "./../assets/images/home/post_header_teaser.jpg"
 author_profile: false

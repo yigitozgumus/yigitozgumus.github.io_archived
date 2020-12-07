@@ -1,6 +1,6 @@
 ---
 title: "Thesis Completed!"
-excerpt: "I graduated from Politecnico di Milano !"
+description: "I graduated from Politecnico di Milano !"
 author_profile: false
 layout: post
 ---
