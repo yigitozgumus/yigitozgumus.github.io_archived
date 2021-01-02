@@ -1,0 +1,94 @@
+{
+  
+    
+        "post0": {
+            "title": "Recap of 2020, Roadmap for 2021",
+            "content": "I haven&#39;t posted anything new this past year. Other than the fact that the whole world faced an epidemic which we only accustomed to see on tv shows and post apocalyptic movies, I was particularly being lazy and procastinated most of my plans regarding to this website. But despite the lack of posts, year 2020 was actually quite a journey. I joined Commencis as a Software Engineer and started working on the Pegasus Team. Then the Covid-19 pandemic came out of nowhere and our still ongoing work from home period has begun. For almost 1 year (6th of January is the exact milestone) I have been working at Commencis. It has been a quite exciting journey and I learned so much about how to develop a product and what agile software development really is. . My 2021 Resolutions revolve around growing and learning more as an engineer and honing my skills even more. Working with 20+ plus team at Commencis showed me how much communication is really important during design, development and testing stages of our work. So I want to write more to this website and become more comfortable around writing to communicate. It&#39;s one of my weak points and I want to throw myself out there to learn, spartan style :) . . For me, that means a new blog post every two weeks. That seemed reasonable enough goal while I was writing this post, time will tell this of course. I changed my website into more minimalistic design and added fastpages integration for easier posting (this post is actually a jupyter notebook even though it doesn&#39;t have to be). I want all the options available to me, so fingers crossed for more high quality posts this year. . In 2020, I couldn&#39;t complete many of my resolutions including reading. I aim to read more this year. That includes both technical textbooks to learn new stuff and also books in general. Maybe reading more may evolve into posts about key notes and highlights of the books I read. . In conclusion, 2021 is here. And we don&#39;t know for sure if it will be the incremented version of 2020 or a new, fresh year that we could use all to go back to normal. Choosing to see the positive side of things are especially difficult during these times, but what else can we do ? . See you on the next post .",
+            "url": "https://www.yigitozgumus.com/blog/life/misc/2021/01/02/recap-2020.html",
+            "relUrl": "/blog/life/misc/2021/01/02/recap-2020.html",
+            "date": " • Jan 2, 2021"
+        }
+        
+    
+  
+    
+        ,"post1": {
+            "title": "Thesis Completed!",
+            "content": "I am very happy to say that after 2 years of courses, exams and rollercoaster of an experience, I completed my master’s degree. My thesis is called Adversarially Learned Anomaly Detection Using Generative Adversarial Networks. You can check out the project repository and the thesis itself. . I will plan my next steps and continue to pursue my interest. More content to come! .",
+            "url": "https://www.yigitozgumus.com/blog/misc/life/2019/08/01/thesis-completed.html",
+            "relUrl": "/blog/misc/life/2019/08/01/thesis-completed.html",
+            "date": " • Aug 1, 2019"
+        }
+        
+    
+  
+    
+        ,"post2": {
+            "title": "Anomaly Detection Using Generative Adversarial Networks",
+            "content": "In this post I will explain the architecture of the bigan and how can it be used for the anomaly detection problem. The papers that inspired this post are down below at the references section. . What is Anomaly Detection ? . Anomaly detection is one of the most important problems concerning multiple domains including manufacturing, Cyber-security, fraud detection and medical imaging. At its core an Anomaly Detection method should learn the data distribution of the normal samples which can be complex and high dimensional to identify the anomalous ones. . The method I will explain focuses on the reconstruction based approach to indentify the anomalous samples. By learning the data distribution and its representation, model is then able to reconstruct a sample image that is similar to the input for the inference. By defining a score function to measure the similarity between the input image and the reconstructed output, we can attain a score that can be used to identify a sample as anomalous or normal. Since the model is trained with the normal images, ideally, when the test image is normal, the reconstructed sample is expected to obtain a lower anomaly score compared to an anomalous image. That is the basis for the anomaly detection using reconstruction based approach. . Generative Adversarial Networks, or GANs are considered as a significant breakthrough in deep learning. They are used to model complex and high dimensional distributions using adversarial training. Let&#39;s explore what that means and how we can use it for this problem. . Intuition Behind GANs . Generative Adversarial Networks consist of 2 networks, one generator and one discriminator. The generator is responsible for generating sample images that is similar to the dataset samples and tries to fool the discriminator. The purpose of the discriminator is to identify whether the image is from the dataset or it is generated by the generator, in other words to classify input images as &quot;real&quot; or &quot;fake&quot;. . . The main training idea behind GANs is based on game theory and assuming that the two network are competing each other. The model is usually trained with the gradient-based approaches by taking minibatch of fake images generated by transforming random vectors sampled from $p_z(z)$ via the generator and minibatch of data samples from $p_{data}(x)$. They are used to maximize $V(D, G)$ with respect to parameters of $D$ by assuming a constant $G$, and then minimizing $V(D, G)$ with respect to parameters of $G$ by assuming a constant $D$. . $$ normalsize min _{G} max _{D} V(D, G)= mathbb{E}_{ boldsymbol{x} sim p_{ text { data }}( boldsymbol{x})}[ log D( boldsymbol{x; theta_d})]+ mathbb{E}_{ boldsymbol{z} sim p_{ boldsymbol{z}}( boldsymbol{z})}[ log (1-D(G( boldsymbol{z; theta_g})))] $$ As we can see, there are 2 loops and two terms. Let&#39;s disect each term. They will provive useful for the BiGAN model in the next section. . Term 1 . $$ begin{aligned} D( boldsymbol{x ; theta_d}) &amp; rightarrow text{Likelihood of Discriminator identifying x as Real} log D( boldsymbol{x ; theta_d}) &amp; rightarrow text{Log Likelihood of Discriminator identifying x as Real} mathbb{E}_{ boldsymbol{x; theta_d} sim p_{ text { data }}( boldsymbol{x})}[ log D( boldsymbol{x; theta_d})] &amp; rightarrow text{Expected Log Likelihood of input samples from real data} end{aligned} $$ Term 2 . $$ begin{aligned} G( boldsymbol{z ; theta_g}) &amp; rightarrow text{Generated image sample from noise $z$} D(G( boldsymbol{z ; theta_g}); theta_d) &amp; rightarrow text{The likelihood of the image from Generator being real} log D(G( boldsymbol{z ; theta_g}); theta_d) &amp; rightarrow text{The log likelihood of the image from Generator being real} log (1-D(G( boldsymbol{z ; theta_g}); theta_d)) &amp; rightarrow text{The log likelihood of the image from Generator being fake} mathbb{E}_{ boldsymbol{z } sim p_{ boldsymbol{z}}( boldsymbol{z})}[ log (1-D(G( boldsymbol{z ; theta_g}); theta_d))] &amp; rightarrow text{E.L.L of Discriminator identifying generated image as fake} end{aligned} $$ Now there are two main loops in the equation that we need to examine. The inner loop of the discriminator and the outer loop of the Generator. If want to summarize their logic: . Inner loop is the training objective of the discriminator. It wants to maximize its probability of classifying an image as real or fake. So It needs to maximize $D(x)$ to classify real images ( since $D(x)$ is the probability of a discriminator identifying image as real) and it also needs to maximize $(1 - D(G(z))$ to maximize its probability for spotting fake images. . The outer loop is the training objective of the generator. Since it&#39;s only on one of the terms we don&#39;t need to look at the first term. Generator wants to fool the discriminator by generating more real like sample images. So in order for it to maximize its probability to get classified as real, it needs to minimize discriminator&#39;s probability of classifying generated image as fake. So it needs to minimize $D(G(z))$ to increase $(1 - D(G(z)))$. . Now that&#39;s out of the way we can focus on what is BiGAN and how does it work ? . BiGAN Architecture . BiGAN is composed of a standard GAN with an additional Encoder that is simultaneously trained with the generator and discriminator. This encoder learns the mapping representation from the input image to the latent space representation (noise). This approach enables inference process much faster than the previous proposed method which is an iterative optimization process via backpropagation for each sample. . . With the addition of the Encoder, the Discriminator behavior changes a little. Now the discriminator not only discriminates in data space ($z$ or $G(z)$) but jointly in data and latent space tuples ($x$, $E(x)$) versus ($G(z)$ , $z$). Generator and encoder are trying to fool the discriminator. &lt;/p&gt; . Let&#39;s explain the objective function of the BiGAN like we did with GAN. . $ min _{G,E} max _{D} V(G, D, E)= mathbb{E}_{x sim p_{x}}[ log D(x, E(x))]+ mathbb{E}_{z sim p_{z}}[ log (1-D(G(z), z))] $ . Our objective function is similar to GAN with the difference of the noise tuple from the encoder and the latent space distribution. From the discriminator&#39;s perspective, the pair with input image and the encoded noise of the input image should be classified as real, and the tuple with sampled noise and the generated image should be classified as fake. So again, it needs to maximize the probability of discriminating $(x, E(x))$ tuple as real and $(G(z), z)$ tuple as fake. . We can consider the encoder and generator loss in the same loop because they are both trying to fool the discriminator. Encoder wants to minimize discriminator&#39;s probability of classifiying $(x, E(x))$. The reason for this is that in order for encoder to be an optimal one, it needs to learn the invert the input from the true data distribution, to act as $E = G^{-1}$. Generator again wants to minimize Discriminator&#39;s ability to spot a fake image so consequentially it wants to maximize $D(G(z), z)$ probability. . After the training of the model is done, we can make an inference to test the model. The score function $A(x)$ is composed of the combination of the reconstruction loss ($L_G$) and discrimination-based loss ($L_D$). The score function and its components are depicted below. . $$ begin{aligned} A(x) &amp;= alpha L_{G}(x)+(1- alpha) L_{D}(x) L_{G}(x) &amp;= |x-G(E(x)) |_{1} L_{D_{1}} &amp;= sigma(D(x, E(x)), 1) L_{D_{2}} &amp;= left |f_{D}(x, E(x))-f_{D}(G(E(x)), E(x)) right |_{1} end{aligned} $$ Reconstruction loss measures the difference between the input image and the reconstructed image. There are 2 types of discrimination loss that we can define. First one depends on the sigmoid cross entropy loss from the discriminator of x being a real example (class 1 in this case), and the second method for defining the discriminator loss is based on the feature matching loss with $f_D$ returning the layer preceding the logits for the given inputs in the discriminator. This loss evaluates if the reconstructed data has similar features in the discriminator as the true sample. Samples with larger $A(x)$ values are considered as more likely from the anomalous sample. . In this introductory post I wanted to talk about the BiGAN architecture for the anomaly detection task. In the following posts I will talk more about anomaly detection, different architectures that can be used with more detailed summary of the architectures and the training techniques. . References . Adversarial Feature Learning | Adversarially Learned Interface | Efficient GAN Based Anormaly Detection | .",
+            "url": "https://www.yigitozgumus.com/thesis/gan/deep%20learning/2019/04/20/anomaly-detection-using-bigans.html",
+            "relUrl": "/thesis/gan/deep%20learning/2019/04/20/anomaly-detection-using-bigans.html",
+            "date": " • Apr 20, 2019"
+        }
+        
+    
+  
+    
+        ,"post3": {
+            "title": "Hello There",
+            "content": "Yes this is my first post. And if you happen to open this website right now you can witness all of its non-existing glory. Well, there is a reason for that. The thing is I’ve always wanted to do a little project like this. But things got in the way and I never found the right oppourtunity to start. Upon the realization that if I wait for the perfect moment any longer, this project might be delayed further than I anticipated. So I deleted my old repository that was literally beginning to gather dust equivalent of what things supposed to become when they are untouched for too long on the internet, deprecated in some sense and git inited this new shiny repository with basically nothing in it. . I love to code and learn new things and I continue to pursue this passion of mine. But maintaining a website was something I’ve never done. So I’ve decided that the busiest period of my life would be the perfect time to do a side project. . For now, this site will be on github pages. I am planning to move all of this to a private server for convenience at some point but right now as you can see the design is far from below average. It will be a fun experience to build something totally from scratch. That’s why I won’t use any premade theme or solution to my design ideas and will implement them myself. . So overall, The main purpose of this website of course is to make this some sort of platform for my ideas, practises and the things I’ve learnt and wanted to share. Designing it will be an extra, fun side project. . See you on next posts. .",
+            "url": "https://www.yigitozgumus.com/blog/life/2018/11/06/hello-world.html",
+            "relUrl": "/blog/life/2018/11/06/hello-world.html",
+            "date": " • Nov 6, 2018"
+        }
+        
+    
+  
+
+  
+  
+
+  
+      ,"page1": {
+          "title": "About me",
+          "content": "Hello there! . My name is Yiğit. I am a computer engineer with a passion to learn new things and design cool stuff. . I am currently working as a Software Engineer at Commencis, building mobile applications. Before that, I received my bachelor’s degree in computer engineering from Bogazici University then graduated from Politecnico di Milano with master of science in Computer science and engineering. . The main reason I choose to be a computer engineer is the basic cliche notion that we, engineers, could build anything. That’s hardly the truth. We can, but there is soooo much to learn to be able to do it properly. At some times people may see this as the occupational hazard since your mind constantly need to be on the look out to keep up with the latest advancements, frameworks, papers, tools and technologies. Of course you can choose not to do that but where is the fun in that ? This reminds me of a quote I frequently remind myself. . The more I learn, the more I realize how much I don’t know. . Albert Einstein . I believe willing to learn anything and being humble about the things you don’t know is the key. And I try to apply this core value to every area in my life. . What else ? Well, I love to run and occasionaly draw stuff. Running was once a goal for me to reach as an indicative to a healthier life but it became a habit I couldn’t shake it off. . Here is to the year 2017 when I ran every day (almost) and documented it. I still run of course. Just not everyday :) . . And of course I love a good cup of coffee. . In this website you will hopefully see a glimpse of what I’ve been upto in my software career and the things I am curios to learn. I tried to take up writing about stuff many times but failed miserably. Believe me, writing this about me page surprised me, like a lot. .",
+          "url": "https://www.yigitozgumus.com/about/",
+          "relUrl": "/about/",
+          "date": ""
+      }
+      
+  
+
+  
+
+  
+  
+
+  
+
+  
+  
+
+  
+
+  
+  
+
+  
+  
+
+  
+  
+
+  
+      ,"page10": {
+          "title": "",
+          "content": "Sitemap: {{ “sitemap.xml” | absolute_url }} | .",
+          "url": "https://www.yigitozgumus.com/robots.txt",
+          "relUrl": "/robots.txt",
+          "date": ""
+      }
+      
+  
+
+}
