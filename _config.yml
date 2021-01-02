@@ -7,11 +7,10 @@
 # https://learnxinyminutes.com/docs/yaml/
 
 title: Yigit Ozgumus
-description: My personal thoughts about programming.
+description: My personal thoughts about programming, engineering, life and quirky nerdy stuff.
 github_username: yigitozgumus
 # you can comment the below line out if your repo name is not different than your baseurl
 github_repo: "yigitozgumus.github.io"
-
 # OPTIONAL: override baseurl and url if using a custom domain
 # Note: leave out the trailing / from this value. 
 url: "https://www.yigitozgumus.com" # the base hostname & protocol for your site, e.g. http://example.com
@@ -41,6 +40,10 @@ minima:
   social_links:
     twitter: yigitozgumus
     github: yigitozgumus
+    linkedin: yigitozgumus
+    facebook: yigitozgumus
+    instagram: yigitozgumus
+    mail: mailto:yigitozgumus1@gmail.com
 
 # Set this to true to get LaTeX math equation support
 use_math: true 
