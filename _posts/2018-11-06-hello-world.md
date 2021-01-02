@@ -2,6 +2,8 @@
 title: "Hello There"
 description: "Pretty boring and generic welcome"
 author_profile: false
+image: "./../assets/images/posts/hello_world/header.jpeg"
+categories: [blog, life]
 layout: post
 ---
 

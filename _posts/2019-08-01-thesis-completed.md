@@ -1,6 +1,7 @@
 ---
 title: "Thesis Completed!"
 description: "I graduated from Politecnico di Milano !"
+image: "./../assets/images/posts/thesis_completed/header.jpg"
 author_profile: false
 layout: post
 ---

@@ -2,11 +2,11 @@
 title: "Anomaly Detection using GAN's"
 permalik: /posts/:title
 description: "My thoughts about anomaly detection using GAN's"
-header:
-  overlay_image: "./../assets/images/home/post_header_teaser.jpg"
+image: "./../assets/images/posts/anomaly/header.png"
 author_profile: false
 toc: true
 comments: true
+categories: [thesis, gan, deep learning]
 author: Yigit Ozgumus
 layout: post
 ---
