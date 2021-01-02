@@ -1,5 +1,6 @@
 ---
-layout: single
+layout: post
+title: test
 ---
 
 work in progress

@@ -1,7 +1,7 @@
 ---
 permalink: /about/
 title: "About me"
-layout: single
+layout: page
 ---
 
 Hello there!
