@@ -1,7 +1,10 @@
 ---
 title: "Thesis Completed!"
 excerpt: "I graduated from Politecnico di Milano !"
-author_profile: false
+author_profile: true
+header:
+  overlay_image: "./../assets/images/posts/thesis_completed/header.jpg"
+tags: [misc]
 ---
 
 
